@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33f66d1570.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <img class="logo" src="img/Rick_and_Morty.png" alt="Rick and Morty logo">
+        <div class="search-container">
+            <select name="species" id="species" class="select">
+                <option value="">Species</option>
+                <option value="animal">Animal</option>
+                <option value="alien">Alien</option>
+                <option value="doença">Doença</option>
+                <option value="desconhecido">Desconhecido</option>
+                <option value="humano">Humano</option>
+                <option value="humanoide">Humanoide</option>
+                <option value="mitologico">Mitologico</option>
+                <option value="poopybutthole">Poopybutthole</option>
+                <option value="robo">Robo</option>
+            </select>
+            <select name="gender" id="gender" class="select">
+                <option value="">Gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="genderless ">Genderless </option>
+                <option value="unknown">Unknown</option>
+            </select>
+            <select name="status" id="status" class="select">
+                <option value="">Status</option>
+                <option value="alive">Alive</option>
+                <option value="dead ">Dead </option>
+                <option value="unknown ">Unknown </option>
+            </select>
+            <input class="input input-name" type="text" placeholder="Filter by name" autofocus>
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass search"></i></button>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-container">
+            <div class="cards">
+            </div>
+            <div class="pagination-wrapper">
+                <button class="prev-btn arrow-btn"><i class="fa-solid fa-circle-chevron-left arrow left-arrow"></i></button>
+                <input type="text" class="page-num" value="1">
+                <button class="next-btn arrow-btn"><i class="fa-solid fa-circle-chevron-right arrow right-arrow"></i></button>
+            </div>
+        </div>
+
+        
+    </main>
+    <div class="modal">
+        <div class="modal__box">
+            <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="img-wrapper"><img class="modal-img" src='https://rickandmortyapi.com/api/character/avatar/3.jpeg' alt=""></div>
+            <table class="table">
+                <tr class="table-row">
+                    <td class="table-date table-head">Status:</td>
+                    <td class="table-date table-date-status"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-date table-head">Gender:</td>
+                    <td class="table-date table-date-gender"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-date table-head">Species:</td>
+                    <td class="table-date table-date-species"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-date table-head">Location:</td>
+                    <td class="table-date table-date-location"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
