@@ -14,7 +14,7 @@
 <div class="container">
     <header class="header">
         <img class="logo" src="img/Rick_and_Morty.png" alt="Rick and Morty logo">
-        <div class="search-container">
+        <div class="search-container" id="search-container">
             <select name="species" id="species" class="select">
                 <option value="">Species</option>
                 <option value="animal">Animal</option>
@@ -40,8 +40,19 @@
                 <option value="dead ">Dead </option>
                 <option value="unknown ">Unknown </option>
             </select>
-            <input class="input input-name" type="text" placeholder="Filter by name" autofocus>
+            <div class="input-name__container">
+                <input class="input input-name" type="text" placeholder="Filter by name" autofocus>
             <button class="search-btn"><i class="fa-solid fa-magnifying-glass search"></i></button>
+            </div>
+
+<!-- BURGER STARTS -->
+            <div class="scroll header__scroll">
+                <button class="scroll__button">
+                    <a href="#search-container" class="sccroll-link"><i class="fa-solid fa-up-long scroll-up"></i></a>
+                </button>
+            </div>
+              <!-- BURGER ENDS -->
+
         </div>
     </header>
     <main class="main">

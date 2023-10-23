@@ -18,6 +18,7 @@ async function getData({species, gender, status}, page = 1, name = inputName.val
 
     if(!res.ok) {       //ok - св-во, которое показывает, успешно ли произошёл запрос на сервер
         cards.innerHTML = `<p class="fail">No results :(</p>`;
+        count = 1;
         throw new Error();
     }
 
@@ -164,3 +165,28 @@ document.querySelectorAll('button').forEach(btn => {
         e.preventDefault();
     })
 })
+
+
+const scrollElement = document.querySelector('.scroll');
+const scrollBtn = document.querySelector('.scroll__button');
+
+window.addEventListener('scroll', (e) => {
+    const scrollY = window.scrollY;
+    if(scrollY > document.documentElement.clientHeight) {
+        scrollElement.classList.add('visible');
+    } else {
+        scrollElement.classList.remove('visible');
+    }
+})
+
+scrollBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let href = document.querySelector('.sccroll-link').getAttribute('href').substring(1);
+    const scrollTarget = document.getElementById(href);
+
+    scrollTarget.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
